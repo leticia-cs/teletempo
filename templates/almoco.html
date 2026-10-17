@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tele-tempo | almoco</title>
+</head>
+<body>
+<header>
+<div>
+<h1>Tele-tempo</h1>
+<div>
+    <p>Hoje é</p>
+    <p id="hoje-data"></p>
+    <p id="hoje-dia"></p>
+</div>
+    </div>
+    </header>
+
+<!-- TIMER -->
+<div>
+    <h2>Timer Almoco</h2>
+    <div>
+        <p id="timer-hora"></p>
+        <p>restantes</p>
+    </div>
+</div>
+<div>
+    <button id="btn-cancelar-almoco">almoco OUT</button>
+</div>
+
+  <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='almoco.js') }}"></script>
+</body>
+</html>

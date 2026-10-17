@@ -1,6 +1,7 @@
-const dataHorario = await (await fetch('/dataHorario')).json();
-const data = `${dataHorario.data.dia}/${dataHorario.data.mes}/${dataHorario.data.ano}`
+export const dH = await (await fetch('/dataHorario')).json();
+export const d = `${dH.data.dia}/${dH.data.mes}/${dH.data.ano}`;
+export const h = `${dH.horario.hora}:${dH.horario.minuto}`;
 
 // preencher na home
-document.getElementById('hoje-data').textContent = data;
-document.getElementById('hoje-dia').textContent = dataHorario.data.diaSemana;
+document.getElementById('hoje-data').textContent = d;
+document.getElementById('hoje-dia').textContent = `(${dH.data.diaSemana})`;

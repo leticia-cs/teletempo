@@ -28,5 +28,9 @@ def dataHorario():
         data={"ano": agora.year, "mes":agora.month, "dia":agora.day, "diaSemana":obter_diaSemana()},
     )
 
+@app.get("/almoco")
+def almoco():
+    return render_template('almoco.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
